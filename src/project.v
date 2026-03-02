@@ -5,7 +5,7 @@
 
 `default_nettype none
 
-module tt_um_example (
+module tt_ALU (
     input  wire [7:0] ui_in,    // [7:6] = op, [4:0] = a
     output wire [7:0] uo_out,   // result
     input  wire [7:0] uio_in,   // [4:0] = b
