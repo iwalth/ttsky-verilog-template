@@ -13,7 +13,7 @@ This project implements a simple ALU with four operations: add, subtract, AND, a
 
 ## How to test
 
-To use this ALU, set ui_in [7:6] to select the operation, ui_in [4:0] for operand a, and uio_in [4:0] for operand b. Recieve the result from uo_out.
+To use this ALU, set ui_in [7:6] to select the operation, ui_in [4:0] for operand a, and uio_in [4:0] for operand b. Recieve the result from uo_out. The testbench covers the basic and corner functionality of the add, sub, AND, and OR operations. It tests for corner cases for additon, such as: a single zero operand, bit overflow, maximum/minimum sums, and MSB input operands. For subtraction, it tests for equal operands, zero operands, bit underflow, minimum/maximum values, and a single MSB operand. For AND operator, it tests for zero operands, all high bit operands, mask operations (verify partial bit operand), no overlapping bits, MSB for both and one operands. For OR operation, it tests for zero for both and single operands, all high bit operands, complementary operands, MSB for both and single operand. Given operation outputs, it tests the mux tree with set operand values for correctness based on different operation (op) values. It also tests unused bits or noise by setting them high to ensure they do not affect the functionality of the ALU. 
 
 ## External hardware
 
